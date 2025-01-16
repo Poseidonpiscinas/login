@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+            background-image: url(imagens/agua.webp);
+        }
+        img {
+            margin: 23px;
+            width: 59%;
+        }
+        .login-container {
+            text-align: center;
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagens/Poseidon pt.webp" alt="Poseidon Piscinas">
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button onclick="login()">Entrar</button>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Verifica as credenciais
+            if (username === "Kayque" && password === "074708") {
+                window.location.href = "index.html"; // Redireciona para a página de administração
+            } else {
+                alert("Credenciais incorretas!");
+            }
+        }
+    </script>
+</body>
+</html>
